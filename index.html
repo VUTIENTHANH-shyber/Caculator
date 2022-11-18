@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+  
+</head>
+<body>
+    <input type="text" id="src">
+    <table>
+        <tr>
+            <td><button  onclick="inpp(1)">1</button>
+                </td>
+            <td><button  onclick="inpp(2)">2</button>
+                </td>
+            <td><button  onclick="inpp(3)">3</button>
+                </td>
+            <td><button  onclick="inpp(4)">4</button>
+                </td>
+            
+        </tr>
+        <tr>
+            <td><button  onclick="inpp(5)">5</button>
+                </td>
+            <td><button  onclick="inpp(6)">6</button>
+                </td>
+            <td><button  onclick="inpp(7)">7</button>
+                </td>
+            <td><button  onclick="inpp(8)">8</button>
+                </td>
+           
+        </tr>
+        <tr>
+            <td><button  onclick="inpp(9)">9</button>
+                </td>
+            <td><button  onclick="inpp(0)">0</button>
+                </td>
+            <td><button  onclick="inpp('+')">+</button>
+                </td>
+            <td><button  onclick="inpp('-')">-</button>
+                </td>
+       
+        </tr>
+        <tr>
+            <td><button  onclick="inpp('*')">*</button>
+                </td>
+            <td><button  onclick="inpp('/')">/</button>
+                </td>
+            <td><button  onclick="tinh('=')">=</button>
+                </td>
+            <td><button  onclick="clr('AC')">AC</button>
+                </td>
+    </table>
+       
+    <script>
+        function inpp(val){
+            document.getElementById("src").value += val;
+        }
+        function clr(){
+            document.getElementById("src").value = "";
+        }
+        function tinh(){
+            let phepTinh = document.getElementById("src").value;
+            document.getElementById("src").value = eval(phepTinh);}
+    </script>     
+</body>
+</html>
